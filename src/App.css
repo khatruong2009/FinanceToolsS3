@@ -1,38 +1,145 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar css */
+.navbar {
+  width: 100vw;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  width: 100vw;
+  background-color: grey;
+}
+
+.navbar-link {
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-link:hover {
+  background-color: black;
+} 
+
+/* Home Page */
+.home {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero {
+  max-width: 90vw;
+  margin-right: 5vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headline-img {
+  max-width: 100vw;
+}
+
+.news {
+  margin: 5vh 5vw;
+  width: 90%;
+}
+
+.news img {
+  max-width: 100%;
+  margin-bottom: 5vh;
+}
+
+/* Tip calc css */
+.tip-calc {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.separate {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.calculator {
+  margin: 5% auto;
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: thistle;
+}
+
+.calculator-header {
+  border-radius: 10px 10px 0 0;
+  padding: 0.2% 0 0.2% 0;
+  font-size: 1.5rem;
+}
+
+.bill-amount {
+  margin-top: 5vh;
+  font-size: 1.2rem;
+}
+
+.service {
+  margin-top: 5vh;
+  font-size: 1.2rem;
+}
+
+.service select {
+  width: 40%;
+  font-size: 1.2rem;
+}
+
+.service select option {
+  text-align: center;
+}
+
+.people {
+  margin-top: 5vh;
+  font-size: 1.2rem;
+}
+
+.people input {
+  width: 25%;
+}
+
+.button {
+  margin-top: 5vh;
+  font-size: 2rem;
+  background-color: black;
   color: white;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+  opacity: .7;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  opacity: 1;
+  transition: .3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result {
+  padding-bottom: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
+/* Rent vs buy  */
+.rvb {
+  text-align: center;
+}
+
+.rvb input {
+  text-align: center;
+}
+
+
