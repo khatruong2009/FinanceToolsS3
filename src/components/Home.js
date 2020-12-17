@@ -88,7 +88,6 @@ function Home() {
   return(
     <div className="home">
       <div className="hero">
-        <h1>Home</h1>
         <h3>Daily Financial Updates:</h3>
         <p>The S&P 500 Index is currently at ${quote}, <span style={{color: (diff >= 0? "green" : "red")}}>{diff}%</span> {diff >= 0? "higher" : "lower"} than the previous close.</p>
         <p>The total amount of Covid 19 cases in the DMV area is {total}.</p>
