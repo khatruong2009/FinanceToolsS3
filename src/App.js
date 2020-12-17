@@ -8,6 +8,7 @@ import Error from "./components/Error";
 import Navbar from "./components/Navbar";
 import About from './components/About';
 import CarLoan from "./components/CarLoan";
+import InvestmentCalc from "./components/InvestmentCalc";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tipcalc" component={TipCalc} />
         <Route path="/rentvsbuycalc" component={RentvsBuyCalc} />
         <Route path="/carloancalc" component={CarLoan} />
+        <Route path="/investmentcalc" component={InvestmentCalc} />
         <Route path="/about" component={About} />
         {/* <Route component={Error} /> */}
       </Switch>

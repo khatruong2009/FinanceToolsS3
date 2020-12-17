@@ -26,6 +26,7 @@ function CarLoan() {
 
   const classes = useStyles();
 
+  //variables to hold inputs for calculations
   const [loan, setLoan] = useState();
   const [ir, setIr] = useState();
   const [term, setTerm] = useState();
@@ -34,6 +35,7 @@ function CarLoan() {
 
   const [hidden, setHidden] = useState(true);
 
+  //formatting functions
   function twoDecimal(x) {
     return Number.parseFloat(x).toFixed(2);
   }
@@ -42,6 +44,7 @@ function CarLoan() {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  //functions to handle inputs
   function changeLoan(e) {
     setLoan(parseInt(e.target.value));
   }
@@ -54,6 +57,7 @@ function CarLoan() {
     setTerm(parseInt(e.target.value));
   }
 
+  //function to handle calculation
   function handleClick() {
     let top = ir/1200;
     let bottom = (1 - (Math.pow((1 + top), (term * -1))));
