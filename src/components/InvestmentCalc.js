@@ -43,6 +43,17 @@ function InvestmentCalc () {
   const [contr, setContr] = useState();  
   const [years, setYears] = useState();
 
+  const [hidden, setHidden] = useState(true);
+
+    //formatting functions
+    function twoDecimal(x) {
+      return Number.parseFloat(x).toFixed(2);
+    }
+  
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
   function changeFv(e) {
     setFv(parseInt(e.target.value));
   }
@@ -68,7 +79,20 @@ function InvestmentCalc () {
   }
 
   function handleClick() {
-    console.log(ir, principal, frequency, contr, years);
+
+    var rate = ir/100;
+    var multiplier = years * frequency;
+    var pvMultiplier = (1 + (rate/frequency))
+    var result1 = (principal) * Math.pow(pvMultiplier, multiplier);
+
+    var result2 = (contr) * ((Math.pow(pvMultiplier, multiplier) - 1) / (rate/frequency)); 
+
+    var final = result1 + result2;
+
+    setFv(final);
+
+    console.log(result1, result2, result1 + result2);
+    setHidden(false);
   }
 
 
@@ -87,7 +111,7 @@ function InvestmentCalc () {
         onChange={changePrincipal}
       />
 
-      <InputLabel>Interest Rate:</InputLabel>
+      <InputLabel>Rate of Return:</InputLabel>
         <TextField
           type="number"
           value={ir}
@@ -130,8 +154,8 @@ function InvestmentCalc () {
           <Button variant="contained" color="Primary" className={classes.calcButton} onClick={handleClick}>Calculate</Button>
         </div>
 
-        <div>
-          <p></p>
+        <div style={{display: (hidden) ? "none" : "block" }}>
+          <p>The value of your investment after {years} years is ${numberWithCommas(twoDecimal(fv))}.</p>
         </div>
 
     </div>
