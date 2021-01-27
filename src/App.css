@@ -39,12 +39,16 @@
   margin-left: 5vw;
 }
 
+.hero p {
+  margin: 5px;
+}
+
 .headline-img {
   max-width: 100vw;
 }
 
 .news {
-  margin: 5vh 5vw;
+  margin: 2vh 5vw;
   width: 90%;
 }
 
